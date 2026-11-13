@@ -1,7 +1,7 @@
 package com.exemplo.notas;
 
 import org.junit.jupiter.api.Test;
-import java.util.ArrayList;
+import java.util.List;
 import static org.junit.jupiter.api.Assertions.*;
 
 class SistemaDesempenhoTest {
@@ -20,7 +20,7 @@ class SistemaDesempenhoTest {
         cadastrar("Ana", 8, 6);
         cadastrar("Bruno", 9, 10);
 
-        ArrayList<ItemClassificacao> resultado = sistema.classificarPorMedia();
+        List<ItemClassificacao> resultado = sistema.classificarPorMedia();
 
         assertEquals(2, resultado.size());
         assertEquals("Bruno", resultado.get(0).nome());
