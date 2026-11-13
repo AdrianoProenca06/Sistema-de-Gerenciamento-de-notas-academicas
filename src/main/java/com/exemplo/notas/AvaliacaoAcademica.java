@@ -1,3 +1,5 @@
+package com.exemplo.notas;
+
 import java.util.List;
 
 public class AvaliacaoAcademica {
