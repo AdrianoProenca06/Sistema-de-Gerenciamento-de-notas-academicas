@@ -36,7 +36,9 @@ public class AvaliacaoAcademicaTest {
 
 
     @Test
-    void naoDeveCalcularMediaSemNotas() {
+    void
+
+    naoDeveCalcularMediaSemNotas() {
 
         AvaliacaoAcademica avaliacao =
                 new AvaliacaoAcademica();
