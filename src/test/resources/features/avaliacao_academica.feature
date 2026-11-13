@@ -7,12 +7,12 @@ Funcionalidade: Cálculo de médias e situação acadêmica
   Esquema do Cenário: Calcular média das notas
     Dado que o aluno possui as notas "<notas>"
     Quando calculo a média das notas
-    Então a média calculada deve ser <media>
+    Então a média calculada deve ser "<media>"
 
     Exemplos:
-      | notas   | media |
-      | 8,6     | 7.0   |
-      | 7,8,9   | 8.0   |
+      | notas | media |
+      | 8,6   | 7.0   |
+      | 7,8,9 | 8.0   |
 
   Cenário: Não calcular média sem notas
     Dado que o aluno não possui notas cadastradas
@@ -20,7 +20,7 @@ Funcionalidade: Cálculo de médias e situação acadêmica
     Então deve ocorrer um erro informando "O aluno não possui notas cadastradas."
 
   Esquema do Cenário: Verificar situação acadêmica
-    Dado que a média do aluno é <media>
+    Dado que a média do aluno é "<media>"
     Quando verifico a situação acadêmica
     Então a situação deve ser "<situacao>"
 
@@ -36,6 +36,6 @@ Funcionalidade: Cálculo de médias e situação acadêmica
     Então deve ocorrer um erro informando "A nota deve estar entre 0 e 10."
 
     Exemplos:
-      | notas  |
-      | 8,11   |
-      | 8,-2   |
+      | notas |
+      | 8,11  |
+      | 8,-2  |

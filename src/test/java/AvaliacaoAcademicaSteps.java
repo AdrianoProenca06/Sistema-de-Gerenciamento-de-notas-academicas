@@ -8,6 +8,7 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class AvaliacaoAcademicaSteps {
+
     private final AvaliacaoAcademica avaliacao = new AvaliacaoAcademica();
     private List<Double> notas;
     private double media;
@@ -27,9 +28,9 @@ public class AvaliacaoAcademicaSteps {
         notas = List.of();
     }
 
-    @Dado("que a média do aluno é {double}")
-    public void mediaDoAluno(double valor) {
-        media = valor;
+    @Dado("que a média do aluno é {string}")
+    public void mediaDoAluno(String valor) {
+        this.media = Double.parseDouble(valor);
     }
 
     @Quando("calculo a média das notas")
@@ -39,8 +40,10 @@ public class AvaliacaoAcademicaSteps {
 
     @Quando("tento calcular a média das notas")
     public void tentarCalcularMedia() {
-        erro = assertThrows(IllegalArgumentException.class,
-                () -> avaliacao.calcularMedia(notas));
+        erro = assertThrows(
+                IllegalArgumentException.class,
+                () -> avaliacao.calcularMedia(notas)
+        );
     }
 
     @Quando("verifico a situação acadêmica")
@@ -48,9 +51,13 @@ public class AvaliacaoAcademicaSteps {
         situacao = avaliacao.verificarSituacao(media);
     }
 
-    @Então("a média calculada deve ser {double}")
-    public void conferirMedia(double esperado) {
-        assertEquals(esperado, media, 0.001);
+    @Então("a média calculada deve ser {string}")
+    public void conferirMedia(String mediaEsperada) {
+        assertEquals(
+                Double.parseDouble(mediaEsperada),
+                media,
+                0.001
+        );
     }
 
     @Então("a situação deve ser {string}")
