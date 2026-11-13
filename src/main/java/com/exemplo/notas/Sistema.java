@@ -7,4 +7,14 @@ public class Sistema {
 
     public Sistema() {}
 
+    public Aluno cadastrarAluno(String nome, String matricula) {
+        Aluno aluno = new Aluno(nome, matricula);
+        listaAlunos.add(aluno);
+        return aluno;
+    }
+
+    public ArrayList<ItemClassificacao> classificarPorMedia() {
+        return new ArrayList<>();
+    }
+
 }
