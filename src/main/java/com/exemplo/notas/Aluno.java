@@ -11,4 +11,11 @@ public class Aluno {
         this.matricula = matricula;
     }
 
+    public String getNome() {
+        return nome;
+    }
+
+    public String getMatricula() {
+        return matricula;
+    }
 }
