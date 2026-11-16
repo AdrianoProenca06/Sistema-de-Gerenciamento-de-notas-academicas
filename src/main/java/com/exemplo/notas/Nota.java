@@ -9,5 +9,15 @@ public class Nota {
         this.valor = valor;
     }
 
+    public String getMateria() {
+        return materia;
+    }
 
+    public double getValor() {
+        return valor;
+    }
+
+    public void setValor(double valor) {
+        this.valor = valor;
+    }
 }
